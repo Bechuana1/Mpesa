@@ -9,12 +9,12 @@ $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
 // ENCRIPT  DATA TO GET PASSWORD
 $Password = base64_encode($BusinessShortCode . $passkey . $Timestamp);
-$phone = '254768168060';
+$phone = '254798222717';
 $money = '1';
 $PartyA = $phone;
-$PartyB = '254708374149';
-$AccountReference = 'UMESKIA SOFTWARES';
-$TransactionDesc = 'stkpush test';
+$PartyB = '254798222717';
+$AccountReference = 'E-farming software';
+$TransactionDesc = 'Order confirmation';
 $Amount = $money;
 $stkpushheader = ['Content-Type:application/json', 'Authorization:Bearer ' . $access_token];
 
@@ -47,5 +47,5 @@ $data = json_decode($curl_response);
 $CheckoutRequestID = $data->CheckoutRequestID;
 $ResponseCode = $data->ResponseCode;
 if ($ResponseCode == "0") {
- // echo "The CheckoutRequestID for this transaction is : " . $CheckoutRequestID;
+  // echo "The CheckoutRequestID for this transaction is : " . $CheckoutRequestID;
 }
